@@ -1,13 +1,10 @@
-
 from fastapi import FastAPI, UploadFile, File, Form
 from fastapi.responses import HTMLResponse
 from pypdf import PdfReader
-from sentence_transformers import SentenceTransformer
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
 import re
-import numpy as np
 import io
 
 
@@ -25,11 +22,9 @@ SKILLS = [
     "Machine Learning", "Deep Learning",
     "Artificial Intelligence",
     "Natural Language Processing",
-    "Computer Vision",
-    "Feature Engineering",
-    "Data Preprocessing",
-    "Data Analysis",
-    "Statistics", "Data Science",
+    "Computer Vision", "NLP",
+    "Feature Engineering", "Data Preprocessing",
+    "Data Analysis", "Statistics", "Data Science",
     "FastAPI", "Flask", "Django",
     "REST API", "Docker", "Kubernetes",
     "Git", "GitHub", "Linux",
@@ -41,27 +36,17 @@ SKILLS = [
 ]
 
 
-model = SentenceTransformer(
-    "all-MiniLM-L6-v2"
-)
-
-
 def clean_text(text):
-
     text = str(text)
-
     text = text.replace("\n", " ")
     text = text.replace("\r", " ")
-
     text = re.sub(r"\s+", " ", text)
-
     return text.strip()
 
 
 def extract_skills(text):
 
     text_lower = text.lower()
-
     found = []
 
     for skill in SKILLS:
@@ -98,37 +83,71 @@ def extract_pdf_text(data):
 
 def tfidf_score(resume, job):
 
-    vectorizer = TfidfVectorizer(
-        stop_words="english",
-        ngram_range=(1, 2)
+    try:
+
+        vectorizer = TfidfVectorizer(
+            stop_words="english",
+            ngram_range=(1, 2),
+            max_features=5000
+        )
+
+        matrix = vectorizer.fit_transform(
+            [resume, job]
+        )
+
+        score = cosine_similarity(
+            matrix[0:1],
+            matrix[1:2]
+        )[0][0]
+
+        return float(score * 100)
+
+    except Exception:
+
+        return 0.0
+
+
+def keyword_score(resume, job):
+
+    resume_words = set(
+        re.findall(
+            r"\b[a-zA-Z][a-zA-Z0-9+#.-]*\b",
+            resume.lower()
+        )
     )
 
-    matrix = vectorizer.fit_transform(
-        [resume, job]
+    job_words = set(
+        re.findall(
+            r"\b[a-zA-Z][a-zA-Z0-9+#.-]*\b",
+            job.lower()
+        )
     )
 
-    score = cosine_similarity(
-        matrix[0:1],
-        matrix[1:2]
-    )[0][0]
+    stopwords = {
+        "the", "and", "or", "for",
+        "with", "this", "that",
+        "from", "your", "you",
+        "our", "are", "will",
+        "have", "has", "job",
+        "role", "work", "years",
+        "year", "to", "of",
+        "in", "on", "a", "an"
+    }
 
-    return float(score * 100)
+    resume_words -= stopwords
+    job_words -= stopwords
 
+    if not job_words:
+        return 0.0
 
-def semantic_score(resume, job):
-
-    embeddings = model.encode(
-        [resume, job],
-        normalize_embeddings=True
+    matching_words = (
+        resume_words & job_words
     )
 
-    score = np.dot(
-        embeddings[0],
-        embeddings[1]
-    )
-
-    return float(
-        max(0, min(1, score)) * 100
+    return (
+        len(matching_words)
+        / len(job_words)
+        * 100
     )
 
 
@@ -154,8 +173,11 @@ def analyze(resume, job):
     )
 
     coverage = (
-        len(matching) / len(job_skills) * 100
-        if job_skills else 0
+        len(matching)
+        / len(job_skills)
+        * 100
+        if job_skills
+        else 0
     )
 
     tfidf = tfidf_score(
@@ -163,21 +185,21 @@ def analyze(resume, job):
         job
     )
 
-    semantic = semantic_score(
+    keyword = keyword_score(
         resume,
         job
     )
 
     final = (
-        semantic * 0.50 +
-        coverage * 0.40 +
-        tfidf * 0.10
+        coverage * 0.50
+        + tfidf * 0.30
+        + keyword * 0.20
     )
 
     return {
         "final": round(final, 2),
-        "semantic": round(semantic, 2),
         "tfidf": round(tfidf, 2),
+        "keyword": round(keyword, 2),
         "coverage": round(coverage, 2),
         "matching": matching,
         "missing": missing
@@ -253,6 +275,7 @@ textarea {
     border-radius: 12px;
     padding: 15px;
     outline: none;
+    margin-bottom: 18px;
 }
 
 textarea:focus {
@@ -264,7 +287,8 @@ input[type=file] {
     padding: 15px;
     border: 1px dashed #52617e;
     border-radius: 12px;
-    margin-bottom: 15px;
+    margin-bottom: 18px;
+    color: white;
 }
 
 button {
@@ -283,6 +307,10 @@ button:hover {
     background: #7c8cff;
     color: #080b16;
     transform: translateY(-2px);
+}
+
+button:active {
+    transform: scale(.98);
 }
 
 .score {
@@ -329,14 +357,6 @@ button:hover {
     border-color: #6b9d7c;
 }
 
-.hidden {
-    display: none;
-}
-
-.error {
-    color: #ff8f8f;
-}
-
 </style>
 
 </head>
@@ -365,7 +385,7 @@ method="post"
 enctype="multipart/form-data">
 
 <label>
-Upload Resume
+Upload Resume PDF
 </label>
 
 <input
@@ -380,8 +400,7 @@ Or paste your resume
 
 <textarea
 name="resume_text"
-placeholder="Paste your resume here...">
-</textarea>
+placeholder="Paste your resume here..."></textarea>
 
 
 <label>
@@ -391,11 +410,8 @@ Job Description
 <textarea
 name="job_description"
 placeholder="Paste the job description here..."
-required>
-</textarea>
+required></textarea>
 
-
-<br><br>
 
 <button type="submit">
 Analyze Resume
@@ -432,7 +448,7 @@ async def analyze_resume(
     job_description: str = Form(...)
 ):
 
-    if resume_file:
+    if resume_file and resume_file.filename:
 
         data = await resume_file.read()
 
@@ -443,7 +459,23 @@ async def analyze_resume(
     if not resume_text.strip():
 
         return HTMLResponse(
-            "<h2>Please provide a resume.</h2>"
+            """
+            <h2 style="font-family:Arial">
+            Please provide a resume.
+            </h2>
+            """,
+            status_code=400
+        )
+
+    if not job_description.strip():
+
+        return HTMLResponse(
+            """
+            <h2 style="font-family:Arial">
+            Please provide a job description.
+            </h2>
+            """,
+            status_code=400
         )
 
     result = analyze(
@@ -463,161 +495,196 @@ async def analyze_resume(
 
     page = f"""
 
-    <!DOCTYPE html>
+<!DOCTYPE html>
 
-    <html>
+<html>
 
-    <head>
+<head>
 
-    <meta name="viewport"
-    content="width=device-width, initial-scale=1">
+<meta name="viewport"
+content="width=device-width, initial-scale=1">
 
-    <title>Analysis Result</title>
+<title>Analysis Result</title>
 
-    <style>
+<style>
 
-    body {{
-        margin: 0;
-        background: #0b1020;
-        color: white;
-        font-family: Arial;
-    }}
+* {{
+    box-sizing: border-box;
+}}
 
-    .container {{
-        width: min(950px, 94%);
-        margin: auto;
-        padding: 30px 0;
-    }}
+body {{
+    margin: 0;
+    background: #0b1020;
+    color: white;
+    font-family: Arial, sans-serif;
+}}
 
-    .card {{
-        background: #121a2e;
-        border: 1px solid #293551;
-        border-radius: 18px;
-        padding: 25px;
-        margin-bottom: 20px;
-    }}
+.container {{
+    width: min(950px, 94%);
+    margin: auto;
+    padding: 30px 0;
+}}
 
-    .score {{
-        text-align: center;
-        font-size: 70px;
-        font-weight: bold;
-    }}
+.card {{
+    background: #121a2e;
+    border: 1px solid #293551;
+    border-radius: 18px;
+    padding: 25px;
+    margin-bottom: 20px;
+}}
 
-    .grid {{
-        display: grid;
-        grid-template-columns:
-        repeat(auto-fit, minmax(180px, 1fr));
-        gap: 15px;
-    }}
+.score {{
+    text-align: center;
+    font-size: clamp(50px, 12vw, 80px);
+    font-weight: bold;
+    margin: 20px;
+}}
 
-    .metric {{
-        text-align: center;
-        padding: 20px;
-        border: 1px solid #303d5a;
-        border-radius: 14px;
-    }}
+.grid {{
+    display: grid;
+    grid-template-columns:
+    repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+}}
 
-    .metric strong {{
-        display: block;
-        font-size: 28px;
-        margin-top: 8px;
-    }}
+.metric {{
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #303d5a;
+    border-radius: 14px;
+}}
 
-    .skill {{
-        display: inline-block;
-        padding: 8px 12px;
-        border: 1px solid #52617e;
-        border-radius: 20px;
-        margin: 4px;
-    }}
+.metric strong {{
+    display: block;
+    font-size: 28px;
+    margin-top: 8px;
+}}
 
-    .back {{
-        display: block;
-        text-align: center;
-        margin-top: 25px;
-        color: white;
-        text-decoration: none;
-        border: 1px solid #7c8cff;
-        padding: 13px;
-        border-radius: 12px;
-    }}
+.skill {{
+    display: inline-block;
+    padding: 8px 12px;
+    border: 1px solid #52617e;
+    border-radius: 20px;
+    margin: 4px;
+}}
 
-    </style>
+.missing {{
+    border-color: #a96d6d;
+}}
 
-    </head>
+.matching {{
+    border-color: #6b9d7c;
+}}
 
-    <body>
+.back {{
+    display: block;
+    text-align: center;
+    margin-top: 25px;
+    color: white;
+    text-decoration: none;
+    border: 1px solid #7c8cff;
+    padding: 13px;
+    border-radius: 12px;
+}}
 
-    <div class="container">
+.back:hover {{
+    background: #7c8cff;
+    color: #080b16;
+}}
 
-    <div class="card">
+</style>
 
-    <h1>Resume Analysis</h1>
+</head>
 
-    <div class="score">
-    {result["final"]}%
-    </div>
+<body>
 
-    <p style="text-align:center">
-    Overall Match Score
-    </p>
+<div class="container">
 
-    </div>
+<div class="card">
 
+<h1>Resume Analysis</h1>
 
-    <div class="card">
+<div class="score">
+{result["final"]}%
+</div>
 
-    <h2>Model Metrics</h2>
+<p style="text-align:center">
+Overall Match Score
+</p>
 
-    <div class="grid">
-
-    <div class="metric">
-    TF-IDF
-    <strong>{result["tfidf"]}%</strong>
-    </div>
-
-    <div class="metric">
-    Semantic
-    <strong>{result["semantic"]}%</strong>
-    </div>
-
-    <div class="metric">
-    Skill Coverage
-    <strong>{result["coverage"]}%</strong>
-    </div>
-
-    </div>
-
-    </div>
+</div>
 
 
-    <div class="card">
+<div class="card">
 
-    <h2>Matching Skills</h2>
+<h2>Matching Metrics</h2>
 
-    {matching_html or "No matching skills detected."}
+<div class="grid">
 
-    </div>
+<div class="metric">
+
+TF-IDF Similarity
+
+<strong>
+{result["tfidf"]}%
+</strong>
+
+</div>
 
 
-    <div class="card">
+<div class="metric">
 
-    <h2>Missing Skills</h2>
+Keyword Relevance
 
-    {missing_html or "No major missing skills detected."}
+<strong>
+{result["keyword"]}%
+</strong>
 
-    </div>
+</div>
 
 
-    <a class="back" href="/">
-    Analyze Another Resume
-    </a>
+<div class="metric">
 
-    </div>
+Skill Coverage
 
-    </body>
+<strong>
+{result["coverage"]}%
+</strong>
 
-    </html>
-    """
+</div>
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<h2>Matching Skills</h2>
+
+{matching_html or "No matching skills detected."}
+
+</div>
+
+
+<div class="card">
+
+<h2>Missing Skills</h2>
+
+{missing_html or "No major missing skills detected."}
+
+</div>
+
+
+<a class="back" href="/">
+Analyze Another Resume
+</a>
+
+</div>
+
+</body>
+
+</html>
+"""
 
     return page
