@@ -1,0 +1,2388 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": []
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    },
+    "widgets": {
+      "application/vnd.jupyter.widget-state+json": {
+        "version_major": 2,
+        "version_minor": 0,
+        "state": {
+          "8709ef2d1e554643b12833e4e8b00e79": {
+            "model_module": "@jupyter-widgets/controls",
+            "model_name": "HBoxModel",
+            "model_module_version": "1.5.0",
+            "state": {
+              "_dom_classes": [],
+              "_model_module": "@jupyter-widgets/controls",
+              "_model_module_version": "1.5.0",
+              "_model_name": "HBoxModel",
+              "_view_count": null,
+              "_view_module": "@jupyter-widgets/controls",
+              "_view_module_version": "1.5.0",
+              "_view_name": "HBoxView",
+              "box_style": "",
+              "children": [
+                "IPY_MODEL_33f86fe0af714f9dabb62f007374d791",
+                "IPY_MODEL_36dfe6e8be4945ba9c90cf479bac35b3",
+                "IPY_MODEL_f89a6e5941a94109b5b6866d490633d7"
+              ],
+              "layout": "IPY_MODEL_319b0b582cc54705b1edfe84b135af26"
+            }
+          },
+          "33f86fe0af714f9dabb62f007374d791": {
+            "model_module": "@jupyter-widgets/controls",
+            "model_name": "HTMLModel",
+            "model_module_version": "1.5.0",
+            "state": {
+              "_dom_classes": [],
+              "_model_module": "@jupyter-widgets/controls",
+              "_model_module_version": "1.5.0",
+              "_model_name": "HTMLModel",
+              "_view_count": null,
+              "_view_module": "@jupyter-widgets/controls",
+              "_view_module_version": "1.5.0",
+              "_view_name": "HTMLView",
+              "description": "",
+              "description_tooltip": null,
+              "layout": "IPY_MODEL_4c5d25607ff74c6f80326455bd2995f0",
+              "placeholder": "​",
+              "style": "IPY_MODEL_f2fddde1c54c40298b13a49e42a41bfc",
+              "value": "Loading weights: 100%"
+            }
+          },
+          "36dfe6e8be4945ba9c90cf479bac35b3": {
+            "model_module": "@jupyter-widgets/controls",
+            "model_name": "FloatProgressModel",
+            "model_module_version": "1.5.0",
+            "state": {
+              "_dom_classes": [],
+              "_model_module": "@jupyter-widgets/controls",
+              "_model_module_version": "1.5.0",
+              "_model_name": "FloatProgressModel",
+              "_view_count": null,
+              "_view_module": "@jupyter-widgets/controls",
+              "_view_module_version": "1.5.0",
+              "_view_name": "ProgressView",
+              "bar_style": "success",
+              "description": "",
+              "description_tooltip": null,
+              "layout": "IPY_MODEL_3d9a2a02cdc24fa8a7c16d5bbeaa0cdc",
+              "max": 103,
+              "min": 0,
+              "orientation": "horizontal",
+              "style": "IPY_MODEL_d3b471a555fd4ad5bf6ef9e17c08b2d4",
+              "value": 103
+            }
+          },
+          "f89a6e5941a94109b5b6866d490633d7": {
+            "model_module": "@jupyter-widgets/controls",
+            "model_name": "HTMLModel",
+            "model_module_version": "1.5.0",
+            "state": {
+              "_dom_classes": [],
+              "_model_module": "@jupyter-widgets/controls",
+              "_model_module_version": "1.5.0",
+              "_model_name": "HTMLModel",
+              "_view_count": null,
+              "_view_module": "@jupyter-widgets/controls",
+              "_view_module_version": "1.5.0",
+              "_view_name": "HTMLView",
+              "description": "",
+              "description_tooltip": null,
+              "layout": "IPY_MODEL_5b80a933607b417e819bdec68be71ae9",
+              "placeholder": "​",
+              "style": "IPY_MODEL_ac497797472e4c05a15dac0d4d3b3ddb",
+              "value": " 103/103 [00:00&lt;00:00, 2791.65it/s]"
+            }
+          },
+          "319b0b582cc54705b1edfe84b135af26": {
+            "model_module": "@jupyter-widgets/base",
+            "model_name": "LayoutModel",
+            "model_module_version": "1.2.0",
+            "state": {
+              "_model_module": "@jupyter-widgets/base",
+              "_model_module_version": "1.2.0",
+              "_model_name": "LayoutModel",
+              "_view_count": null,
+              "_view_module": "@jupyter-widgets/base",
+              "_view_module_version": "1.2.0",
+              "_view_name": "LayoutView",
+              "align_content": null,
+              "align_items": null,
+              "align_self": null,
+              "border": null,
+              "bottom": null,
+              "display": null,
+              "flex": null,
+              "flex_flow": null,
+              "grid_area": null,
+              "grid_auto_columns": null,
+              "grid_auto_flow": null,
+              "grid_auto_rows": null,
+              "grid_column": null,
+              "grid_gap": null,
+              "grid_row": null,
+              "grid_template_areas": null,
+              "grid_template_columns": null,
+              "grid_template_rows": null,
+              "height": null,
+              "justify_content": null,
+              "justify_items": null,
+              "left": null,
+              "margin": null,
+              "max_height": null,
+              "max_width": null,
+              "min_height": null,
+              "min_width": null,
+              "object_fit": null,
+              "object_position": null,
+              "order": null,
+              "overflow": null,
+              "overflow_x": null,
+              "overflow_y": null,
+              "padding": null,
+              "right": null,
+              "top": null,
+              "visibility": null,
+              "width": null
+            }
+          },
+          "4c5d25607ff74c6f80326455bd2995f0": {
+            "model_module": "@jupyter-widgets/base",
+            "model_name": "LayoutModel",
+            "model_module_version": "1.2.0",
+            "state": {
+              "_model_module": "@jupyter-widgets/base",
+              "_model_module_version": "1.2.0",
+              "_model_name": "LayoutModel",
+              "_view_count": null,
+              "_view_module": "@jupyter-widgets/base",
+              "_view_module_version": "1.2.0",
+              "_view_name": "LayoutView",
+              "align_content": null,
+              "align_items": null,
+              "align_self": null,
+              "border": null,
+              "bottom": null,
+              "display": null,
+              "flex": null,
+              "flex_flow": null,
+              "grid_area": null,
+              "grid_auto_columns": null,
+              "grid_auto_flow": null,
+              "grid_auto_rows": null,
+              "grid_column": null,
+              "grid_gap": null,
+              "grid_row": null,
+              "grid_template_areas": null,
+              "grid_template_columns": null,
+              "grid_template_rows": null,
+              "height": null,
+              "justify_content": null,
+              "justify_items": null,
+              "left": null,
+              "margin": null,
+              "max_height": null,
+              "max_width": null,
+              "min_height": null,
+              "min_width": null,
+              "object_fit": null,
+              "object_position": null,
+              "order": null,
+              "overflow": null,
+              "overflow_x": null,
+              "overflow_y": null,
+              "padding": null,
+              "right": null,
+              "top": null,
+              "visibility": null,
+              "width": null
+            }
+          },
+          "f2fddde1c54c40298b13a49e42a41bfc": {
+            "model_module": "@jupyter-widgets/controls",
+            "model_name": "DescriptionStyleModel",
+            "model_module_version": "1.5.0",
+            "state": {
+              "_model_module": "@jupyter-widgets/controls",
+              "_model_module_version": "1.5.0",
+              "_model_name": "DescriptionStyleModel",
+              "_view_count": null,
+              "_view_module": "@jupyter-widgets/base",
+              "_view_module_version": "1.2.0",
+              "_view_name": "StyleView",
+              "description_width": ""
+            }
+          },
+          "3d9a2a02cdc24fa8a7c16d5bbeaa0cdc": {
+            "model_module": "@jupyter-widgets/base",
+            "model_name": "LayoutModel",
+            "model_module_version": "1.2.0",
+            "state": {
+              "_model_module": "@jupyter-widgets/base",
+              "_model_module_version": "1.2.0",
+              "_model_name": "LayoutModel",
+              "_view_count": null,
+              "_view_module": "@jupyter-widgets/base",
+              "_view_module_version": "1.2.0",
+              "_view_name": "LayoutView",
+              "align_content": null,
+              "align_items": null,
+              "align_self": null,
+              "border": null,
+              "bottom": null,
+              "display": null,
+              "flex": null,
+              "flex_flow": null,
+              "grid_area": null,
+              "grid_auto_columns": null,
+              "grid_auto_flow": null,
+              "grid_auto_rows": null,
+              "grid_column": null,
+              "grid_gap": null,
+              "grid_row": null,
+              "grid_template_areas": null,
+              "grid_template_columns": null,
+              "grid_template_rows": null,
+              "height": null,
+              "justify_content": null,
+              "justify_items": null,
+              "left": null,
+              "margin": null,
+              "max_height": null,
+              "max_width": null,
+              "min_height": null,
+              "min_width": null,
+              "object_fit": null,
+              "object_position": null,
+              "order": null,
+              "overflow": null,
+              "overflow_x": null,
+              "overflow_y": null,
+              "padding": null,
+              "right": null,
+              "top": null,
+              "visibility": null,
+              "width": null
+            }
+          },
+          "d3b471a555fd4ad5bf6ef9e17c08b2d4": {
+            "model_module": "@jupyter-widgets/controls",
+            "model_name": "ProgressStyleModel",
+            "model_module_version": "1.5.0",
+            "state": {
+              "_model_module": "@jupyter-widgets/controls",
+              "_model_module_version": "1.5.0",
+              "_model_name": "ProgressStyleModel",
+              "_view_count": null,
+              "_view_module": "@jupyter-widgets/base",
+              "_view_module_version": "1.2.0",
+              "_view_name": "StyleView",
+              "bar_color": null,
+              "description_width": ""
+            }
+          },
+          "5b80a933607b417e819bdec68be71ae9": {
+            "model_module": "@jupyter-widgets/base",
+            "model_name": "LayoutModel",
+            "model_module_version": "1.2.0",
+            "state": {
+              "_model_module": "@jupyter-widgets/base",
+              "_model_module_version": "1.2.0",
+              "_model_name": "LayoutModel",
+              "_view_count": null,
+              "_view_module": "@jupyter-widgets/base",
+              "_view_module_version": "1.2.0",
+              "_view_name": "LayoutView",
+              "align_content": null,
+              "align_items": null,
+              "align_self": null,
+              "border": null,
+              "bottom": null,
+              "display": null,
+              "flex": null,
+              "flex_flow": null,
+              "grid_area": null,
+              "grid_auto_columns": null,
+              "grid_auto_flow": null,
+              "grid_auto_rows": null,
+              "grid_column": null,
+              "grid_gap": null,
+              "grid_row": null,
+              "grid_template_areas": null,
+              "grid_template_columns": null,
+              "grid_template_rows": null,
+              "height": null,
+              "justify_content": null,
+              "justify_items": null,
+              "left": null,
+              "margin": null,
+              "max_height": null,
+              "max_width": null,
+              "min_height": null,
+              "min_width": null,
+              "object_fit": null,
+              "object_position": null,
+              "order": null,
+              "overflow": null,
+              "overflow_x": null,
+              "overflow_y": null,
+              "padding": null,
+              "right": null,
+              "top": null,
+              "visibility": null,
+              "width": null
+            }
+          },
+          "ac497797472e4c05a15dac0d4d3b3ddb": {
+            "model_module": "@jupyter-widgets/controls",
+            "model_name": "DescriptionStyleModel",
+            "model_module_version": "1.5.0",
+            "state": {
+              "_model_module": "@jupyter-widgets/controls",
+              "_model_module_version": "1.5.0",
+              "_model_name": "DescriptionStyleModel",
+              "_view_count": null,
+              "_view_module": "@jupyter-widgets/base",
+              "_view_module_version": "1.2.0",
+              "_view_name": "StyleView",
+              "description_width": ""
+            }
+          }
+        }
+      }
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "0HbyDD-l9ler"
+      },
+      "outputs": [],
+      "source": [
+        "!pip install -q pandas numpy scikit-learn pypdf python-docx sentence-transformers"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import os\n",
+        "import re\n",
+        "import json\n",
+        "import numpy as np\n",
+        "import pandas as pd\n",
+        "\n",
+        "from pypdf import PdfReader\n",
+        "from docx import Document\n",
+        "\n",
+        "from sklearn.feature_extraction.text import TfidfVectorizer\n",
+        "from sklearn.metrics.pairwise import cosine_similarity\n",
+        "\n",
+        "print(\"All libraries installed successfully.\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "ziFL3p1scBG_",
+        "outputId": "b39c5eff-9694-48f4-9dbc-db2ae10ac21c"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "All libraries installed successfully.\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "SKILLS = [\n",
+        "    \"Python\",\n",
+        "    \"Java\",\n",
+        "    \"C++\",\n",
+        "    \"JavaScript\",\n",
+        "    \"TypeScript\",\n",
+        "\n",
+        "    \"SQL\",\n",
+        "    \"MySQL\",\n",
+        "    \"PostgreSQL\",\n",
+        "    \"MongoDB\",\n",
+        "    \"SQLite\",\n",
+        "\n",
+        "    \"NumPy\",\n",
+        "    \"Pandas\",\n",
+        "    \"Matplotlib\",\n",
+        "    \"Seaborn\",\n",
+        "\n",
+        "    \"Scikit-learn\",\n",
+        "    \"TensorFlow\",\n",
+        "    \"PyTorch\",\n",
+        "    \"Keras\",\n",
+        "    \"XGBoost\",\n",
+        "    \"LightGBM\",\n",
+        "    \"CatBoost\",\n",
+        "\n",
+        "    \"Machine Learning\",\n",
+        "    \"Deep Learning\",\n",
+        "    \"Artificial Intelligence\",\n",
+        "    \"Natural Language Processing\",\n",
+        "    \"Computer Vision\",\n",
+        "    \"Reinforcement Learning\",\n",
+        "\n",
+        "    \"Feature Engineering\",\n",
+        "    \"Data Preprocessing\",\n",
+        "    \"Data Analysis\",\n",
+        "    \"Statistics\",\n",
+        "    \"Data Science\",\n",
+        "\n",
+        "    \"FastAPI\",\n",
+        "    \"Flask\",\n",
+        "    \"Django\",\n",
+        "    \"REST API\",\n",
+        "    \"API\",\n",
+        "\n",
+        "    \"Docker\",\n",
+        "    \"Kubernetes\",\n",
+        "    \"Git\",\n",
+        "    \"GitHub\",\n",
+        "    \"Linux\",\n",
+        "\n",
+        "    \"AWS\",\n",
+        "    \"Google Cloud\",\n",
+        "    \"Azure\",\n",
+        "    \"GCP\",\n",
+        "\n",
+        "    \"Hugging Face\",\n",
+        "    \"Transformers\",\n",
+        "    \"BERT\",\n",
+        "    \"LLM\",\n",
+        "    \"Generative AI\",\n",
+        "\n",
+        "    \"OpenAI\",\n",
+        "    \"LangChain\",\n",
+        "    \"RAG\",\n",
+        "\n",
+        "    \"Spark\",\n",
+        "    \"Apache Spark\",\n",
+        "\n",
+        "    \"HTML\",\n",
+        "    \"CSS\",\n",
+        "    \"React\",\n",
+        "    \"Node.js\"\n",
+        "]\n",
+        "\n",
+        "print(\"Total skills:\", len(SKILLS))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "eSu5-7F2cFzr",
+        "outputId": "04fa9f69-9506-4cbc-fb33-33cdf85c95bb"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Total skills: 60\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def clean_text(text):\n",
+        "    text = str(text)\n",
+        "\n",
+        "    text = text.replace(\"\\n\", \" \")\n",
+        "    text = text.replace(\"\\r\", \" \")\n",
+        "\n",
+        "    text = re.sub(r\"\\s+\", \" \", text)\n",
+        "\n",
+        "    return text.strip()"
+      ],
+      "metadata": {
+        "id": "djUGss37cNpj"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "sample = \"\"\"\n",
+        "Python\n",
+        "Machine Learning\n",
+        "\n",
+        "SQL\n",
+        "\"\"\"\n",
+        "\n",
+        "print(clean_text(sample))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "9-x_9261cQc6",
+        "outputId": "538a06c7-4079-4fd4-f329-0e6b83cc43d9"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Python Machine Learning SQL\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def extract_skills(text, skills=SKILLS):\n",
+        "\n",
+        "    text_lower = text.lower()\n",
+        "\n",
+        "    found = []\n",
+        "\n",
+        "    for skill in skills:\n",
+        "\n",
+        "        pattern = r\"(?<!\\w)\" + re.escape(skill.lower()) + r\"(?!\\w)\"\n",
+        "\n",
+        "        if re.search(pattern, text_lower):\n",
+        "            found.append(skill)\n",
+        "\n",
+        "    return sorted(set(found))"
+      ],
+      "metadata": {
+        "id": "Fioffkg9cT3f"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "test_text = \"\"\"\n",
+        "I have experience with Python, Pandas, Scikit-learn,\n",
+        "SQL, Machine Learning and FastAPI.\n",
+        "\"\"\"\n",
+        "\n",
+        "print(extract_skills(test_text))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "0kwDb1vlcuuC",
+        "outputId": "33777a32-4db7-4af4-d136-054237808341"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "['FastAPI', 'Machine Learning', 'Pandas', 'Python', 'SQL', 'Scikit-learn']\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "resume_text = \"\"\"\n",
+        "Computer Science and Technology student interested in Machine Learning\n",
+        "and Artificial Intelligence.\n",
+        "\n",
+        "Skills include Python, NumPy, Pandas, Matplotlib, Scikit-learn,\n",
+        "SQL, Machine Learning, Natural Language Processing, FastAPI,\n",
+        "Git, GitHub and Data Science.\n",
+        "\n",
+        "Built machine learning projects involving classification,\n",
+        "regression, data preprocessing, feature engineering and model evaluation.\n",
+        "\"\"\""
+      ],
+      "metadata": {
+        "id": "Yukcu0e3cxYv"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "job_text = \"\"\"\n",
+        "We are looking for a Junior Machine Learning Engineer.\n",
+        "\n",
+        "The candidate should have experience with Python, Machine Learning,\n",
+        "Scikit-learn, Pandas, NumPy and SQL.\n",
+        "\n",
+        "Knowledge of Natural Language Processing, FastAPI, Docker,\n",
+        "AWS, Git, REST API and Deep Learning is preferred.\n",
+        "\n",
+        "Responsibilities include developing machine learning models,\n",
+        "preprocessing datasets, feature engineering, model evaluation\n",
+        "and deploying machine learning applications.\n",
+        "\"\"\""
+      ],
+      "metadata": {
+        "id": "vvhwKPvPc0gd"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def calculate_tfidf_similarity(resume, job):\n",
+        "\n",
+        "    vectorizer = TfidfVectorizer(\n",
+        "        stop_words=\"english\",\n",
+        "        ngram_range=(1, 2)\n",
+        "    )\n",
+        "\n",
+        "    matrix = vectorizer.fit_transform([\n",
+        "        resume,\n",
+        "        job\n",
+        "    ])\n",
+        "\n",
+        "    similarity = cosine_similarity(\n",
+        "        matrix[0:1],\n",
+        "        matrix[1:2]\n",
+        "    )[0][0]\n",
+        "\n",
+        "    return float(similarity * 100)"
+      ],
+      "metadata": {
+        "id": "kJON72_ec4Oz"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "tfidf_score = calculate_tfidf_similarity(\n",
+        "    resume_text,\n",
+        "    job_text\n",
+        ")\n",
+        "\n",
+        "print(f\"TF-IDF Similarity: {tfidf_score:.2f}%\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "nW4aFQ-mc7mF",
+        "outputId": "babc1f9c-b373-41d1-9724-e6c7d15dc9d1"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "TF-IDF Similarity: 37.90%\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def calculate_skill_match(resume, job):\n",
+        "\n",
+        "    resume_skills = set(extract_skills(resume))\n",
+        "    job_skills = set(extract_skills(job))\n",
+        "\n",
+        "    matching = sorted(resume_skills & job_skills)\n",
+        "\n",
+        "    missing = sorted(job_skills - resume_skills)\n",
+        "\n",
+        "    extra = sorted(resume_skills - job_skills)\n",
+        "\n",
+        "    if len(job_skills) > 0:\n",
+        "        coverage = len(matching) / len(job_skills) * 100\n",
+        "    else:\n",
+        "        coverage = 0\n",
+        "\n",
+        "    return {\n",
+        "        \"resume_skills\": sorted(resume_skills),\n",
+        "        \"job_skills\": sorted(job_skills),\n",
+        "        \"matching_skills\": matching,\n",
+        "        \"missing_skills\": missing,\n",
+        "        \"extra_skills\": extra,\n",
+        "        \"skill_coverage\": coverage\n",
+        "    }"
+      ],
+      "metadata": {
+        "id": "gzfksfzIc-fa"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "skill_result = calculate_skill_match(\n",
+        "    resume_text,\n",
+        "    job_text\n",
+        ")\n",
+        "\n",
+        "print(\"Matching:\", skill_result[\"matching_skills\"])\n",
+        "print(\"Missing:\", skill_result[\"missing_skills\"])\n",
+        "print(\"Coverage:\", skill_result[\"skill_coverage\"])"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "qBBehCuVdFEC",
+        "outputId": "d4106ac2-9e22-4e87-d2f8-e25c9552cfdc"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Matching: ['FastAPI', 'Feature Engineering', 'Git', 'Machine Learning', 'Natural Language Processing', 'NumPy', 'Pandas', 'Python', 'SQL', 'Scikit-learn']\n",
+            "Missing: ['API', 'AWS', 'Deep Learning', 'Docker', 'REST API']\n",
+            "Coverage: 66.66666666666666\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "skill_result = calculate_skill_match(\n",
+        "    resume_text,\n",
+        "    job_text\n",
+        ")\n",
+        "\n",
+        "print(\"Matching:\", skill_result[\"matching_skills\"])\n",
+        "print(\"Missing:\", skill_result[\"missing_skills\"])\n",
+        "print(\"Coverage:\", skill_result[\"skill_coverage\"])"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "5xbsppAwdIQZ",
+        "outputId": "59c5b507-434d-45c7-c996-42e1f755e0ff"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Matching: ['FastAPI', 'Feature Engineering', 'Git', 'Machine Learning', 'Natural Language Processing', 'NumPy', 'Pandas', 'Python', 'SQL', 'Scikit-learn']\n",
+            "Missing: ['API', 'AWS', 'Deep Learning', 'Docker', 'REST API']\n",
+            "Coverage: 66.66666666666666\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "from sentence_transformers import SentenceTransformer\n",
+        "\n",
+        "embedding_model = SentenceTransformer(\n",
+        "    \"all-MiniLM-L6-v2\"\n",
+        ")\n",
+        "\n",
+        "print(\"Embedding model loaded.\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 78,
+          "referenced_widgets": [
+            "8709ef2d1e554643b12833e4e8b00e79",
+            "33f86fe0af714f9dabb62f007374d791",
+            "36dfe6e8be4945ba9c90cf479bac35b3",
+            "f89a6e5941a94109b5b6866d490633d7",
+            "319b0b582cc54705b1edfe84b135af26",
+            "4c5d25607ff74c6f80326455bd2995f0",
+            "f2fddde1c54c40298b13a49e42a41bfc",
+            "3d9a2a02cdc24fa8a7c16d5bbeaa0cdc",
+            "d3b471a555fd4ad5bf6ef9e17c08b2d4",
+            "5b80a933607b417e819bdec68be71ae9",
+            "ac497797472e4c05a15dac0d4d3b3ddb"
+          ]
+        },
+        "id": "_AfM3yiXdMNo",
+        "outputId": "d7cd0705-5535-45f2-8d43-4b7d4f6db836"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "display_data",
+          "data": {
+            "text/plain": [
+              "Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]"
+            ],
+            "application/vnd.jupyter.widget-view+json": {
+              "version_major": 2,
+              "version_minor": 0,
+              "model_id": "8709ef2d1e554643b12833e4e8b00e79"
+            }
+          },
+          "metadata": {}
+        },
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Embedding model loaded.\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def calculate_semantic_similarity(resume, job):\n",
+        "\n",
+        "    embeddings = embedding_model.encode(\n",
+        "        [resume, job],\n",
+        "        normalize_embeddings=True\n",
+        "    )\n",
+        "\n",
+        "    score = np.dot(\n",
+        "        embeddings[0],\n",
+        "        embeddings[1]\n",
+        "    )\n",
+        "\n",
+        "    score = max(0, min(1, float(score)))\n",
+        "\n",
+        "    return score * 100"
+      ],
+      "metadata": {
+        "id": "yempNl7bdeLs"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "semantic_score = calculate_semantic_similarity(\n",
+        "    resume_text,\n",
+        "    job_text\n",
+        ")\n",
+        "\n",
+        "print(f\"Semantic Similarity: {semantic_score:.2f}%\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "t6OwkD8hdmCB",
+        "outputId": "5fb6734f-dab8-40b7-cb15-7cabe23abc6a"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Semantic Similarity: 73.38%\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def calculate_final_score(resume, job):\n",
+        "\n",
+        "    tfidf = calculate_tfidf_similarity(\n",
+        "        resume,\n",
+        "        job\n",
+        "    )\n",
+        "\n",
+        "    semantic = calculate_semantic_similarity(\n",
+        "        resume,\n",
+        "        job\n",
+        "    )\n",
+        "\n",
+        "    skill_result = calculate_skill_match(\n",
+        "        resume,\n",
+        "        job\n",
+        "    )\n",
+        "\n",
+        "    skill_coverage = skill_result[\"skill_coverage\"]\n",
+        "\n",
+        "    final_score = (\n",
+        "        semantic * 0.50 +\n",
+        "        skill_coverage * 0.40 +\n",
+        "        tfidf * 0.10\n",
+        "    )\n",
+        "\n",
+        "    return {\n",
+        "        \"final_score\": round(final_score, 2),\n",
+        "        \"semantic_score\": round(semantic, 2),\n",
+        "        \"tfidf_score\": round(tfidf, 2),\n",
+        "        \"skill_coverage\": round(skill_coverage, 2),\n",
+        "        **skill_result\n",
+        "    }"
+      ],
+      "metadata": {
+        "id": "BrcKPWG5eIY4"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "result = calculate_final_score(\n",
+        "    resume_text,\n",
+        "    job_text\n",
+        ")\n",
+        "\n",
+        "print(\"Final Match Score:\", result[\"final_score\"], \"%\")\n",
+        "print(\"Semantic Score:\", result[\"semantic_score\"], \"%\")\n",
+        "print(\"TF-IDF Score:\", result[\"tfidf_score\"], \"%\")\n",
+        "print(\"Skill Coverage:\", result[\"skill_coverage\"], \"%\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "DVtmTYbTeKAh",
+        "outputId": "587be38c-d74c-43b6-a5ef-7859a9a5494b"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Final Match Score: 67.14 %\n",
+            "Semantic Score: 73.38 %\n",
+            "TF-IDF Score: 37.9 %\n",
+            "Skill Coverage: 66.66666666666666 %\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def generate_recommendations(result):\n",
+        "\n",
+        "    recommendations = []\n",
+        "\n",
+        "    missing = result[\"missing_skills\"]\n",
+        "\n",
+        "    if missing:\n",
+        "        for skill in missing:\n",
+        "            recommendations.append(\n",
+        "                f\"Consider learning or improving {skill}.\"\n",
+        "            )\n",
+        "\n",
+        "    if result[\"final_score\"] < 50:\n",
+        "\n",
+        "        recommendations.append(\n",
+        "            \"Your resume has relatively low alignment with this job. \"\n",
+        "            \"Consider tailoring your resume to the job requirements.\"\n",
+        "        )\n",
+        "\n",
+        "    elif result[\"final_score\"] < 75:\n",
+        "\n",
+        "        recommendations.append(\n",
+        "            \"Your profile has moderate alignment. \"\n",
+        "            \"Adding missing technical skills could improve your match.\"\n",
+        "        )\n",
+        "\n",
+        "    else:\n",
+        "\n",
+        "        recommendations.append(\n",
+        "            \"Your profile shows strong alignment with this position.\"\n",
+        "        )\n",
+        "\n",
+        "    return recommendations"
+      ],
+      "metadata": {
+        "id": "JcPjH026eZlT"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def analyze_resume(resume, job):\n",
+        "\n",
+        "    resume = clean_text(resume)\n",
+        "    job = clean_text(job)\n",
+        "\n",
+        "    result = calculate_final_score(\n",
+        "        resume,\n",
+        "        job\n",
+        "    )\n",
+        "\n",
+        "    result[\"recommendations\"] = generate_recommendations(\n",
+        "        result\n",
+        "    )\n",
+        "\n",
+        "    return result"
+      ],
+      "metadata": {
+        "id": "zyleIFV7ebhn"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "result = analyze_resume(\n",
+        "    resume_text,\n",
+        "    job_text\n",
+        ")"
+      ],
+      "metadata": {
+        "id": "O0EQpKaneeif"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(\"=\" * 50)\n",
+        "print(\"        AI RESUME–JOB MATCHER\")\n",
+        "print(\"=\" * 50)\n",
+        "\n",
+        "print(f\"\\nFinal Match Score: {result['final_score']}%\")\n",
+        "\n",
+        "print(f\"Semantic Similarity: {result['semantic_score']}%\")\n",
+        "\n",
+        "print(f\"TF-IDF Similarity: {result['tfidf_score']}%\")\n",
+        "\n",
+        "print(f\"Skill Coverage: {result['skill_coverage']}%\")\n",
+        "\n",
+        "print(\"\\nMATCHING SKILLS\")\n",
+        "\n",
+        "for skill in result[\"matching_skills\"]:\n",
+        "    print(\"✓\", skill)\n",
+        "\n",
+        "print(\"\\nMISSING SKILLS\")\n",
+        "\n",
+        "for skill in result[\"missing_skills\"]:\n",
+        "    print(\"✗\", skill)\n",
+        "\n",
+        "print(\"\\nRECOMMENDATIONS\")\n",
+        "\n",
+        "for recommendation in result[\"recommendations\"]:\n",
+        "    print(\"→\", recommendation)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "N6W-syuNehVR",
+        "outputId": "01cf08c5-8d5b-45c1-d772-bcf9a2c1888a"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "==================================================\n",
+            "        AI RESUME–JOB MATCHER\n",
+            "==================================================\n",
+            "\n",
+            "Final Match Score: 67.14%\n",
+            "Semantic Similarity: 73.38%\n",
+            "TF-IDF Similarity: 37.9%\n",
+            "Skill Coverage: 66.66666666666666%\n",
+            "\n",
+            "MATCHING SKILLS\n",
+            "✓ FastAPI\n",
+            "✓ Feature Engineering\n",
+            "✓ Git\n",
+            "✓ Machine Learning\n",
+            "✓ Natural Language Processing\n",
+            "✓ NumPy\n",
+            "✓ Pandas\n",
+            "✓ Python\n",
+            "✓ SQL\n",
+            "✓ Scikit-learn\n",
+            "\n",
+            "MISSING SKILLS\n",
+            "✗ API\n",
+            "✗ AWS\n",
+            "✗ Deep Learning\n",
+            "✗ Docker\n",
+            "✗ REST API\n",
+            "\n",
+            "RECOMMENDATIONS\n",
+            "→ Consider learning or improving API.\n",
+            "→ Consider learning or improving AWS.\n",
+            "→ Consider learning or improving Deep Learning.\n",
+            "→ Consider learning or improving Docker.\n",
+            "→ Consider learning or improving REST API.\n",
+            "→ Your profile has moderate alignment. Adding missing technical skills could improve your match.\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def extract_pdf_text(file_path):\n",
+        "\n",
+        "    reader = PdfReader(file_path)\n",
+        "\n",
+        "    pages = []\n",
+        "\n",
+        "    for page in reader.pages:\n",
+        "\n",
+        "        text = page.extract_text()\n",
+        "\n",
+        "        if text:\n",
+        "            pages.append(text)\n",
+        "\n",
+        "    return \"\\n\".join(pages)"
+      ],
+      "metadata": {
+        "id": "-2fyx9xxeooo"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "from google.colab import files\n",
+        "\n",
+        "uploaded = files.upload()"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 128
+        },
+        "id": "2buX_UbhetDO",
+        "outputId": "9bd4ee32-e789-4a1a-ddad-2560d2dac22b"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "display_data",
+          "data": {
+            "text/plain": [
+              "<IPython.core.display.HTML object>"
+            ],
+            "text/html": [
+              "\n",
+              "     <input type=\"file\" id=\"files-a20fbbe2-476c-41fe-8da1-58503d9cb813\" name=\"files[]\" multiple disabled\n",
+              "        style=\"border:none\" />\n",
+              "     <output id=\"result-a20fbbe2-476c-41fe-8da1-58503d9cb813\">\n",
+              "      Upload widget is only available when the cell has been executed in the\n",
+              "      current browser session. Please rerun this cell to enable.\n",
+              "      </output>\n",
+              "      <script>// Copyright 2017 Google LLC\n",
+              "//\n",
+              "// Licensed under the Apache License, Version 2.0 (the \"License\");\n",
+              "// you may not use this file except in compliance with the License.\n",
+              "// You may obtain a copy of the License at\n",
+              "//\n",
+              "//      http://www.apache.org/licenses/LICENSE-2.0\n",
+              "//\n",
+              "// Unless required by applicable law or agreed to in writing, software\n",
+              "// distributed under the License is distributed on an \"AS IS\" BASIS,\n",
+              "// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n",
+              "// See the License for the specific language governing permissions and\n",
+              "// limitations under the License.\n",
+              "\n",
+              "/**\n",
+              " * @fileoverview Helpers for google.colab Python module.\n",
+              " */\n",
+              "(function(scope) {\n",
+              "function span(text, styleAttributes = {}) {\n",
+              "  const element = document.createElement('span');\n",
+              "  element.textContent = text;\n",
+              "  for (const key of Object.keys(styleAttributes)) {\n",
+              "    element.style[key] = styleAttributes[key];\n",
+              "  }\n",
+              "  return element;\n",
+              "}\n",
+              "\n",
+              "// Max number of bytes which will be uploaded at a time.\n",
+              "const MAX_PAYLOAD_SIZE = 100 * 1024;\n",
+              "\n",
+              "function _uploadFiles(inputId, outputId) {\n",
+              "  const steps = uploadFilesStep(inputId, outputId);\n",
+              "  const outputElement = document.getElementById(outputId);\n",
+              "  // Cache steps on the outputElement to make it available for the next call\n",
+              "  // to uploadFilesContinue from Python.\n",
+              "  outputElement.steps = steps;\n",
+              "\n",
+              "  return _uploadFilesContinue(outputId);\n",
+              "}\n",
+              "\n",
+              "// This is roughly an async generator (not supported in the browser yet),\n",
+              "// where there are multiple asynchronous steps and the Python side is going\n",
+              "// to poll for completion of each step.\n",
+              "// This uses a Promise to block the python side on completion of each step,\n",
+              "// then passes the result of the previous step as the input to the next step.\n",
+              "function _uploadFilesContinue(outputId) {\n",
+              "  const outputElement = document.getElementById(outputId);\n",
+              "  const steps = outputElement.steps;\n",
+              "\n",
+              "  const next = steps.next(outputElement.lastPromiseValue);\n",
+              "  return Promise.resolve(next.value.promise).then((value) => {\n",
+              "    // Cache the last promise value to make it available to the next\n",
+              "    // step of the generator.\n",
+              "    outputElement.lastPromiseValue = value;\n",
+              "    return next.value.response;\n",
+              "  });\n",
+              "}\n",
+              "\n",
+              "/**\n",
+              " * Generator function which is called between each async step of the upload\n",
+              " * process.\n",
+              " * @param {string} inputId Element ID of the input file picker element.\n",
+              " * @param {string} outputId Element ID of the output display.\n",
+              " * @return {!Iterable<!Object>} Iterable of next steps.\n",
+              " */\n",
+              "function* uploadFilesStep(inputId, outputId) {\n",
+              "  const inputElement = document.getElementById(inputId);\n",
+              "  inputElement.disabled = false;\n",
+              "\n",
+              "  const outputElement = document.getElementById(outputId);\n",
+              "  outputElement.innerHTML = '';\n",
+              "\n",
+              "  const pickedPromise = new Promise((resolve) => {\n",
+              "    inputElement.addEventListener('change', (e) => {\n",
+              "      resolve(e.target.files);\n",
+              "    });\n",
+              "  });\n",
+              "\n",
+              "  const cancel = document.createElement('button');\n",
+              "  inputElement.parentElement.appendChild(cancel);\n",
+              "  cancel.textContent = 'Cancel upload';\n",
+              "  const cancelPromise = new Promise((resolve) => {\n",
+              "    cancel.onclick = () => {\n",
+              "      resolve(null);\n",
+              "    };\n",
+              "  });\n",
+              "\n",
+              "  // Wait for the user to pick the files.\n",
+              "  const files = yield {\n",
+              "    promise: Promise.race([pickedPromise, cancelPromise]),\n",
+              "    response: {\n",
+              "      action: 'starting',\n",
+              "    }\n",
+              "  };\n",
+              "\n",
+              "  cancel.remove();\n",
+              "\n",
+              "  // Disable the input element since further picks are not allowed.\n",
+              "  inputElement.disabled = true;\n",
+              "\n",
+              "  if (!files) {\n",
+              "    return {\n",
+              "      response: {\n",
+              "        action: 'complete',\n",
+              "      }\n",
+              "    };\n",
+              "  }\n",
+              "\n",
+              "  for (const file of files) {\n",
+              "    const li = document.createElement('li');\n",
+              "    li.append(span(file.name, {fontWeight: 'bold'}));\n",
+              "    li.append(span(\n",
+              "        `(${file.type || 'n/a'}) - ${file.size} bytes, ` +\n",
+              "        `last modified: ${\n",
+              "            file.lastModifiedDate ? file.lastModifiedDate.toLocaleDateString() :\n",
+              "                                    'n/a'} - `));\n",
+              "    const percent = span('0% done');\n",
+              "    li.appendChild(percent);\n",
+              "\n",
+              "    outputElement.appendChild(li);\n",
+              "\n",
+              "    const fileDataPromise = new Promise((resolve) => {\n",
+              "      const reader = new FileReader();\n",
+              "      reader.onload = (e) => {\n",
+              "        resolve(e.target.result);\n",
+              "      };\n",
+              "      reader.readAsArrayBuffer(file);\n",
+              "    });\n",
+              "    // Wait for the data to be ready.\n",
+              "    let fileData = yield {\n",
+              "      promise: fileDataPromise,\n",
+              "      response: {\n",
+              "        action: 'continue',\n",
+              "      }\n",
+              "    };\n",
+              "\n",
+              "    // Use a chunked sending to avoid message size limits. See b/62115660.\n",
+              "    let position = 0;\n",
+              "    do {\n",
+              "      const length = Math.min(fileData.byteLength - position, MAX_PAYLOAD_SIZE);\n",
+              "      const chunk = new Uint8Array(fileData, position, length);\n",
+              "      position += length;\n",
+              "\n",
+              "      const base64 = btoa(String.fromCharCode.apply(null, chunk));\n",
+              "      yield {\n",
+              "        response: {\n",
+              "          action: 'append',\n",
+              "          file: file.name,\n",
+              "          data: base64,\n",
+              "        },\n",
+              "      };\n",
+              "\n",
+              "      let percentDone = fileData.byteLength === 0 ?\n",
+              "          100 :\n",
+              "          Math.round((position / fileData.byteLength) * 100);\n",
+              "      percent.textContent = `${percentDone}% done`;\n",
+              "\n",
+              "    } while (position < fileData.byteLength);\n",
+              "  }\n",
+              "\n",
+              "  // All done.\n",
+              "  yield {\n",
+              "    response: {\n",
+              "      action: 'complete',\n",
+              "    }\n",
+              "  };\n",
+              "}\n",
+              "\n",
+              "scope.google = scope.google || {};\n",
+              "scope.google.colab = scope.google.colab || {};\n",
+              "scope.google.colab._files = {\n",
+              "  _uploadFiles,\n",
+              "  _uploadFilesContinue,\n",
+              "};\n",
+              "})(self);\n",
+              "</script> "
+            ]
+          },
+          "metadata": {}
+        },
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Saving data.pdf to data (1).pdf\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "resume_from_pdf = extract_pdf_text(\n",
+        "    \"data.pdf\"\n",
+        ")\n",
+        "\n",
+        "print(resume_from_pdf[:3000])"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "ng8yO1SIz0sT",
+        "outputId": "5949af48-3ac9-4696-d69b-ebb121a4d3b2"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def extract_docx_text(file_path):\n",
+        "\n",
+        "    document = Document(file_path)\n",
+        "\n",
+        "    paragraphs = []\n",
+        "\n",
+        "    for paragraph in document.paragraphs:\n",
+        "\n",
+        "        if paragraph.text.strip():\n",
+        "            paragraphs.append(paragraph.text)\n",
+        "\n",
+        "    return \"\\n\".join(paragraphs)"
+      ],
+      "metadata": {
+        "id": "FNRuYWnh0Wxa"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "%%writefile app.py\n",
+        "\n",
+        "from fastapi import FastAPI, UploadFile, File, Form\n",
+        "from fastapi.responses import HTMLResponse\n",
+        "from pypdf import PdfReader\n",
+        "from sentence_transformers import SentenceTransformer\n",
+        "from sklearn.feature_extraction.text import TfidfVectorizer\n",
+        "from sklearn.metrics.pairwise import cosine_similarity\n",
+        "\n",
+        "import re\n",
+        "import numpy as np\n",
+        "import io\n",
+        "\n",
+        "\n",
+        "app = FastAPI(\n",
+        "    title=\"AI Resume Job Matcher\"\n",
+        ")\n",
+        "\n",
+        "\n",
+        "SKILLS = [\n",
+        "    \"Python\", \"Java\", \"C++\", \"JavaScript\",\n",
+        "    \"SQL\", \"MySQL\", \"PostgreSQL\", \"MongoDB\",\n",
+        "    \"NumPy\", \"Pandas\", \"Matplotlib\", \"Seaborn\",\n",
+        "    \"Scikit-learn\", \"TensorFlow\", \"PyTorch\",\n",
+        "    \"Keras\", \"XGBoost\", \"LightGBM\", \"CatBoost\",\n",
+        "    \"Machine Learning\", \"Deep Learning\",\n",
+        "    \"Artificial Intelligence\",\n",
+        "    \"Natural Language Processing\",\n",
+        "    \"Computer Vision\",\n",
+        "    \"Feature Engineering\",\n",
+        "    \"Data Preprocessing\",\n",
+        "    \"Data Analysis\",\n",
+        "    \"Statistics\", \"Data Science\",\n",
+        "    \"FastAPI\", \"Flask\", \"Django\",\n",
+        "    \"REST API\", \"Docker\", \"Kubernetes\",\n",
+        "    \"Git\", \"GitHub\", \"Linux\",\n",
+        "    \"AWS\", \"Google Cloud\", \"Azure\", \"GCP\",\n",
+        "    \"Hugging Face\", \"Transformers\", \"BERT\",\n",
+        "    \"LLM\", \"Generative AI\", \"OpenAI\",\n",
+        "    \"LangChain\", \"RAG\",\n",
+        "    \"Apache Spark\", \"React\", \"Node.js\"\n",
+        "]\n",
+        "\n",
+        "\n",
+        "model = SentenceTransformer(\n",
+        "    \"all-MiniLM-L6-v2\"\n",
+        ")\n",
+        "\n",
+        "\n",
+        "def clean_text(text):\n",
+        "\n",
+        "    text = str(text)\n",
+        "\n",
+        "    text = text.replace(\"\\n\", \" \")\n",
+        "    text = text.replace(\"\\r\", \" \")\n",
+        "\n",
+        "    text = re.sub(r\"\\s+\", \" \", text)\n",
+        "\n",
+        "    return text.strip()\n",
+        "\n",
+        "\n",
+        "def extract_skills(text):\n",
+        "\n",
+        "    text_lower = text.lower()\n",
+        "\n",
+        "    found = []\n",
+        "\n",
+        "    for skill in SKILLS:\n",
+        "\n",
+        "        pattern = (\n",
+        "            r\"(?<!\\w)\"\n",
+        "            + re.escape(skill.lower())\n",
+        "            + r\"(?!\\w)\"\n",
+        "        )\n",
+        "\n",
+        "        if re.search(pattern, text_lower):\n",
+        "            found.append(skill)\n",
+        "\n",
+        "    return sorted(set(found))\n",
+        "\n",
+        "\n",
+        "def extract_pdf_text(data):\n",
+        "\n",
+        "    reader = PdfReader(\n",
+        "        io.BytesIO(data)\n",
+        "    )\n",
+        "\n",
+        "    pages = []\n",
+        "\n",
+        "    for page in reader.pages:\n",
+        "\n",
+        "        text = page.extract_text()\n",
+        "\n",
+        "        if text:\n",
+        "            pages.append(text)\n",
+        "\n",
+        "    return \"\\n\".join(pages)\n",
+        "\n",
+        "\n",
+        "def tfidf_score(resume, job):\n",
+        "\n",
+        "    vectorizer = TfidfVectorizer(\n",
+        "        stop_words=\"english\",\n",
+        "        ngram_range=(1, 2)\n",
+        "    )\n",
+        "\n",
+        "    matrix = vectorizer.fit_transform(\n",
+        "        [resume, job]\n",
+        "    )\n",
+        "\n",
+        "    score = cosine_similarity(\n",
+        "        matrix[0:1],\n",
+        "        matrix[1:2]\n",
+        "    )[0][0]\n",
+        "\n",
+        "    return float(score * 100)\n",
+        "\n",
+        "\n",
+        "def semantic_score(resume, job):\n",
+        "\n",
+        "    embeddings = model.encode(\n",
+        "        [resume, job],\n",
+        "        normalize_embeddings=True\n",
+        "    )\n",
+        "\n",
+        "    score = np.dot(\n",
+        "        embeddings[0],\n",
+        "        embeddings[1]\n",
+        "    )\n",
+        "\n",
+        "    return float(\n",
+        "        max(0, min(1, score)) * 100\n",
+        "    )\n",
+        "\n",
+        "\n",
+        "def analyze(resume, job):\n",
+        "\n",
+        "    resume = clean_text(resume)\n",
+        "    job = clean_text(job)\n",
+        "\n",
+        "    resume_skills = set(\n",
+        "        extract_skills(resume)\n",
+        "    )\n",
+        "\n",
+        "    job_skills = set(\n",
+        "        extract_skills(job)\n",
+        "    )\n",
+        "\n",
+        "    matching = sorted(\n",
+        "        resume_skills & job_skills\n",
+        "    )\n",
+        "\n",
+        "    missing = sorted(\n",
+        "        job_skills - resume_skills\n",
+        "    )\n",
+        "\n",
+        "    coverage = (\n",
+        "        len(matching) / len(job_skills) * 100\n",
+        "        if job_skills else 0\n",
+        "    )\n",
+        "\n",
+        "    tfidf = tfidf_score(\n",
+        "        resume,\n",
+        "        job\n",
+        "    )\n",
+        "\n",
+        "    semantic = semantic_score(\n",
+        "        resume,\n",
+        "        job\n",
+        "    )\n",
+        "\n",
+        "    final = (\n",
+        "        semantic * 0.50 +\n",
+        "        coverage * 0.40 +\n",
+        "        tfidf * 0.10\n",
+        "    )\n",
+        "\n",
+        "    return {\n",
+        "        \"final\": round(final, 2),\n",
+        "        \"semantic\": round(semantic, 2),\n",
+        "        \"tfidf\": round(tfidf, 2),\n",
+        "        \"coverage\": round(coverage, 2),\n",
+        "        \"matching\": matching,\n",
+        "        \"missing\": missing\n",
+        "    }\n",
+        "\n",
+        "\n",
+        "HTML = \"\"\"\n",
+        "<!DOCTYPE html>\n",
+        "\n",
+        "<html>\n",
+        "\n",
+        "<head>\n",
+        "\n",
+        "<meta name=\"viewport\"\n",
+        "content=\"width=device-width, initial-scale=1\">\n",
+        "\n",
+        "<title>AI Resume Job Matcher</title>\n",
+        "\n",
+        "<style>\n",
+        "\n",
+        "* {\n",
+        "    box-sizing: border-box;\n",
+        "}\n",
+        "\n",
+        "body {\n",
+        "    margin: 0;\n",
+        "    font-family: Arial, sans-serif;\n",
+        "    background: #0b1020;\n",
+        "    color: white;\n",
+        "}\n",
+        "\n",
+        ".container {\n",
+        "    width: min(1000px, 94%);\n",
+        "    margin: auto;\n",
+        "    padding: 30px 0;\n",
+        "}\n",
+        "\n",
+        ".hero {\n",
+        "    text-align: center;\n",
+        "    margin-bottom: 30px;\n",
+        "}\n",
+        "\n",
+        ".hero h1 {\n",
+        "    font-size: clamp(30px, 7vw, 55px);\n",
+        "    margin-bottom: 10px;\n",
+        "}\n",
+        "\n",
+        ".hero p {\n",
+        "    color: #aab3c5;\n",
+        "}\n",
+        "\n",
+        ".card {\n",
+        "    background: #121a2e;\n",
+        "    border: 1px solid #293551;\n",
+        "    border-radius: 18px;\n",
+        "    padding: 22px;\n",
+        "    margin-bottom: 20px;\n",
+        "}\n",
+        "\n",
+        "label {\n",
+        "    display: block;\n",
+        "    margin-bottom: 8px;\n",
+        "    font-weight: bold;\n",
+        "}\n",
+        "\n",
+        "textarea {\n",
+        "    width: 100%;\n",
+        "    min-height: 220px;\n",
+        "    resize: vertical;\n",
+        "    border: 1px solid #3b4865;\n",
+        "    background: #0c1325;\n",
+        "    color: white;\n",
+        "    border-radius: 12px;\n",
+        "    padding: 15px;\n",
+        "    outline: none;\n",
+        "}\n",
+        "\n",
+        "textarea:focus {\n",
+        "    border-color: #7c8cff;\n",
+        "}\n",
+        "\n",
+        "input[type=file] {\n",
+        "    width: 100%;\n",
+        "    padding: 15px;\n",
+        "    border: 1px dashed #52617e;\n",
+        "    border-radius: 12px;\n",
+        "    margin-bottom: 15px;\n",
+        "}\n",
+        "\n",
+        "button {\n",
+        "    width: 100%;\n",
+        "    padding: 15px;\n",
+        "    border-radius: 12px;\n",
+        "    border: 1px solid #8b96ff;\n",
+        "    background: transparent;\n",
+        "    color: white;\n",
+        "    font-size: 16px;\n",
+        "    cursor: pointer;\n",
+        "    transition: .2s;\n",
+        "}\n",
+        "\n",
+        "button:hover {\n",
+        "    background: #7c8cff;\n",
+        "    color: #080b16;\n",
+        "    transform: translateY(-2px);\n",
+        "}\n",
+        "\n",
+        ".score {\n",
+        "    text-align: center;\n",
+        "    font-size: 60px;\n",
+        "    font-weight: bold;\n",
+        "    margin: 20px;\n",
+        "}\n",
+        "\n",
+        ".grid {\n",
+        "    display: grid;\n",
+        "    grid-template-columns:\n",
+        "        repeat(auto-fit, minmax(220px, 1fr));\n",
+        "    gap: 15px;\n",
+        "}\n",
+        "\n",
+        ".metric {\n",
+        "    padding: 20px;\n",
+        "    border: 1px solid #303d5a;\n",
+        "    border-radius: 14px;\n",
+        "    text-align: center;\n",
+        "}\n",
+        "\n",
+        ".metric strong {\n",
+        "    display: block;\n",
+        "    font-size: 28px;\n",
+        "    margin-top: 8px;\n",
+        "}\n",
+        "\n",
+        ".skill {\n",
+        "    display: inline-block;\n",
+        "    border: 1px solid #506080;\n",
+        "    padding: 7px 10px;\n",
+        "    border-radius: 20px;\n",
+        "    margin: 4px;\n",
+        "    font-size: 14px;\n",
+        "}\n",
+        "\n",
+        ".missing {\n",
+        "    border-color: #a96d6d;\n",
+        "}\n",
+        "\n",
+        ".matching {\n",
+        "    border-color: #6b9d7c;\n",
+        "}\n",
+        "\n",
+        ".hidden {\n",
+        "    display: none;\n",
+        "}\n",
+        "\n",
+        ".error {\n",
+        "    color: #ff8f8f;\n",
+        "}\n",
+        "\n",
+        "</style>\n",
+        "\n",
+        "</head>\n",
+        "\n",
+        "\n",
+        "<body>\n",
+        "\n",
+        "<div class=\"container\">\n",
+        "\n",
+        "<div class=\"hero\">\n",
+        "\n",
+        "<h1>AI Resume–Job Matcher</h1>\n",
+        "\n",
+        "<p>\n",
+        "NLP-powered resume analysis and skill-gap detection\n",
+        "</p>\n",
+        "\n",
+        "</div>\n",
+        "\n",
+        "\n",
+        "<div class=\"card\">\n",
+        "\n",
+        "<form\n",
+        "action=\"/analyze\"\n",
+        "method=\"post\"\n",
+        "enctype=\"multipart/form-data\">\n",
+        "\n",
+        "<label>\n",
+        "Upload Resume\n",
+        "</label>\n",
+        "\n",
+        "<input\n",
+        "type=\"file\"\n",
+        "name=\"resume_file\"\n",
+        "accept=\".pdf\">\n",
+        "\n",
+        "\n",
+        "<label>\n",
+        "Or paste your resume\n",
+        "</label>\n",
+        "\n",
+        "<textarea\n",
+        "name=\"resume_text\"\n",
+        "placeholder=\"Paste your resume here...\">\n",
+        "</textarea>\n",
+        "\n",
+        "\n",
+        "<label>\n",
+        "Job Description\n",
+        "</label>\n",
+        "\n",
+        "<textarea\n",
+        "name=\"job_description\"\n",
+        "placeholder=\"Paste the job description here...\"\n",
+        "required>\n",
+        "</textarea>\n",
+        "\n",
+        "\n",
+        "<br><br>\n",
+        "\n",
+        "<button type=\"submit\">\n",
+        "Analyze Resume\n",
+        "</button>\n",
+        "\n",
+        "</form>\n",
+        "\n",
+        "</div>\n",
+        "\n",
+        "</div>\n",
+        "\n",
+        "</body>\n",
+        "\n",
+        "</html>\n",
+        "\"\"\"\n",
+        "\n",
+        "\n",
+        "@app.get(\"/\", response_class=HTMLResponse)\n",
+        "def home():\n",
+        "\n",
+        "    return HTML\n",
+        "\n",
+        "\n",
+        "@app.post(\n",
+        "    \"/analyze\",\n",
+        "    response_class=HTMLResponse\n",
+        ")\n",
+        "async def analyze_resume(\n",
+        "\n",
+        "    resume_file: UploadFile = File(None),\n",
+        "\n",
+        "    resume_text: str = Form(\"\"),\n",
+        "\n",
+        "    job_description: str = Form(...)\n",
+        "):\n",
+        "\n",
+        "    if resume_file:\n",
+        "\n",
+        "        data = await resume_file.read()\n",
+        "\n",
+        "        if resume_file.filename.lower().endswith(\".pdf\"):\n",
+        "\n",
+        "            resume_text = extract_pdf_text(data)\n",
+        "\n",
+        "    if not resume_text.strip():\n",
+        "\n",
+        "        return HTMLResponse(\n",
+        "            \"<h2>Please provide a resume.</h2>\"\n",
+        "        )\n",
+        "\n",
+        "    result = analyze(\n",
+        "        resume_text,\n",
+        "        job_description\n",
+        "    )\n",
+        "\n",
+        "    matching_html = \"\".join(\n",
+        "        f'<span class=\"skill matching\">✓ {x}</span>'\n",
+        "        for x in result[\"matching\"]\n",
+        "    )\n",
+        "\n",
+        "    missing_html = \"\".join(\n",
+        "        f'<span class=\"skill missing\">✗ {x}</span>'\n",
+        "        for x in result[\"missing\"]\n",
+        "    )\n",
+        "\n",
+        "    page = f\"\"\"\n",
+        "\n",
+        "    <!DOCTYPE html>\n",
+        "\n",
+        "    <html>\n",
+        "\n",
+        "    <head>\n",
+        "\n",
+        "    <meta name=\"viewport\"\n",
+        "    content=\"width=device-width, initial-scale=1\">\n",
+        "\n",
+        "    <title>Analysis Result</title>\n",
+        "\n",
+        "    <style>\n",
+        "\n",
+        "    body {{\n",
+        "        margin: 0;\n",
+        "        background: #0b1020;\n",
+        "        color: white;\n",
+        "        font-family: Arial;\n",
+        "    }}\n",
+        "\n",
+        "    .container {{\n",
+        "        width: min(950px, 94%);\n",
+        "        margin: auto;\n",
+        "        padding: 30px 0;\n",
+        "    }}\n",
+        "\n",
+        "    .card {{\n",
+        "        background: #121a2e;\n",
+        "        border: 1px solid #293551;\n",
+        "        border-radius: 18px;\n",
+        "        padding: 25px;\n",
+        "        margin-bottom: 20px;\n",
+        "    }}\n",
+        "\n",
+        "    .score {{\n",
+        "        text-align: center;\n",
+        "        font-size: 70px;\n",
+        "        font-weight: bold;\n",
+        "    }}\n",
+        "\n",
+        "    .grid {{\n",
+        "        display: grid;\n",
+        "        grid-template-columns:\n",
+        "        repeat(auto-fit, minmax(180px, 1fr));\n",
+        "        gap: 15px;\n",
+        "    }}\n",
+        "\n",
+        "    .metric {{\n",
+        "        text-align: center;\n",
+        "        padding: 20px;\n",
+        "        border: 1px solid #303d5a;\n",
+        "        border-radius: 14px;\n",
+        "    }}\n",
+        "\n",
+        "    .metric strong {{\n",
+        "        display: block;\n",
+        "        font-size: 28px;\n",
+        "        margin-top: 8px;\n",
+        "    }}\n",
+        "\n",
+        "    .skill {{\n",
+        "        display: inline-block;\n",
+        "        padding: 8px 12px;\n",
+        "        border: 1px solid #52617e;\n",
+        "        border-radius: 20px;\n",
+        "        margin: 4px;\n",
+        "    }}\n",
+        "\n",
+        "    .back {{\n",
+        "        display: block;\n",
+        "        text-align: center;\n",
+        "        margin-top: 25px;\n",
+        "        color: white;\n",
+        "        text-decoration: none;\n",
+        "        border: 1px solid #7c8cff;\n",
+        "        padding: 13px;\n",
+        "        border-radius: 12px;\n",
+        "    }}\n",
+        "\n",
+        "    </style>\n",
+        "\n",
+        "    </head>\n",
+        "\n",
+        "    <body>\n",
+        "\n",
+        "    <div class=\"container\">\n",
+        "\n",
+        "    <div class=\"card\">\n",
+        "\n",
+        "    <h1>Resume Analysis</h1>\n",
+        "\n",
+        "    <div class=\"score\">\n",
+        "    {result[\"final\"]}%\n",
+        "    </div>\n",
+        "\n",
+        "    <p style=\"text-align:center\">\n",
+        "    Overall Match Score\n",
+        "    </p>\n",
+        "\n",
+        "    </div>\n",
+        "\n",
+        "\n",
+        "    <div class=\"card\">\n",
+        "\n",
+        "    <h2>Model Metrics</h2>\n",
+        "\n",
+        "    <div class=\"grid\">\n",
+        "\n",
+        "    <div class=\"metric\">\n",
+        "    TF-IDF\n",
+        "    <strong>{result[\"tfidf\"]}%</strong>\n",
+        "    </div>\n",
+        "\n",
+        "    <div class=\"metric\">\n",
+        "    Semantic\n",
+        "    <strong>{result[\"semantic\"]}%</strong>\n",
+        "    </div>\n",
+        "\n",
+        "    <div class=\"metric\">\n",
+        "    Skill Coverage\n",
+        "    <strong>{result[\"coverage\"]}%</strong>\n",
+        "    </div>\n",
+        "\n",
+        "    </div>\n",
+        "\n",
+        "    </div>\n",
+        "\n",
+        "\n",
+        "    <div class=\"card\">\n",
+        "\n",
+        "    <h2>Matching Skills</h2>\n",
+        "\n",
+        "    {matching_html or \"No matching skills detected.\"}\n",
+        "\n",
+        "    </div>\n",
+        "\n",
+        "\n",
+        "    <div class=\"card\">\n",
+        "\n",
+        "    <h2>Missing Skills</h2>\n",
+        "\n",
+        "    {missing_html or \"No major missing skills detected.\"}\n",
+        "\n",
+        "    </div>\n",
+        "\n",
+        "\n",
+        "    <a class=\"back\" href=\"/\">\n",
+        "    Analyze Another Resume\n",
+        "    </a>\n",
+        "\n",
+        "    </div>\n",
+        "\n",
+        "    </body>\n",
+        "\n",
+        "    </html>\n",
+        "    \"\"\"\n",
+        "\n",
+        "    return page"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "nMGo_YIJ0kw2",
+        "outputId": "739c9868-d859-4511-dddc-ee00609ff45e"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Overwriting app.py\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "%%writefile requirements.txt\n",
+        "\n",
+        "fastapi\n",
+        "uvicorn\n",
+        "python-multipart\n",
+        "numpy\n",
+        "scikit-learn\n",
+        "pypdf\n",
+        "sentence-transformers\n",
+        "torch"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "NxH0fxjk02Q_",
+        "outputId": "2a099207-c53b-4474-ca59-d120a3fcb5c8"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Overwriting requirements.txt\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "!pip install -q fastapi uvicorn python-multipart"
+      ],
+      "metadata": {
+        "id": "GC3i3dwP091a"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "!uvicorn app:app --host 0.0.0.0 --port 8000 &"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "0H2SBLir1ElF",
+        "outputId": "cc107672-442a-49a5-f3c3-27fd5ecc2af9"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n",
+            "Loading weights: 100% 103/103 [00:00<00:00, 12044.87it/s]\n",
+            "\u001b[32mINFO\u001b[0m:     Started server process [\u001b[36m33938\u001b[0m]\n",
+            "\u001b[32mINFO\u001b[0m:     Waiting for application startup.\n",
+            "\u001b[32mINFO\u001b[0m:     Application startup complete.\n",
+            "\u001b[31mERROR\u001b[0m:    [Errno 98] error while attempting to bind on address ('0.0.0.0', 8000): address already in use\n",
+            "\u001b[32mINFO\u001b[0m:     Waiting for application shutdown.\n",
+            "\u001b[32mINFO\u001b[0m:     Application shutdown complete.\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "!pip install -q pyngrok"
+      ],
+      "metadata": {
+        "id": "3LWvlARe3aBY"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "!fuser -k 8000/tcp"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "4OW6jNIx5Uwf",
+        "outputId": "b60f4985-0d95-4629-99eb-b341d2fc6602"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "8000/tcp:            33095\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "!lsof -i :8000"
+      ],
+      "metadata": {
+        "id": "Mj0DOpLW5Zr8"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "!uvicorn app:app --host 0.0.0.0 --port 8000 > server.log 2>&1 &"
+      ],
+      "metadata": {
+        "id": "zm9d-OUJ5bxm"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "!cat server.log"
+      ],
+      "metadata": {
+        "id": "J_bgFOBC5he3"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "from google.colab import files\n",
+        "\n",
+        "files.download(\"app.py\")\n",
+        "files.download(\"requirements.txt\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 17
+        },
+        "id": "j9oQALNu56Z_",
+        "outputId": "462dd497-b29c-4062-894c-a5bdb8cd2070"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "display_data",
+          "data": {
+            "text/plain": [
+              "<IPython.core.display.Javascript object>"
+            ],
+            "application/javascript": [
+              "\n",
+              "    async function download(id, filename, size) {\n",
+              "      if (!google.colab.kernel.accessAllowed) {\n",
+              "        return;\n",
+              "      }\n",
+              "      const div = document.createElement('div');\n",
+              "      const label = document.createElement('label');\n",
+              "      label.textContent = `Downloading \"${filename}\": `;\n",
+              "      div.appendChild(label);\n",
+              "      const progress = document.createElement('progress');\n",
+              "      progress.max = size;\n",
+              "      div.appendChild(progress);\n",
+              "      document.body.appendChild(div);\n",
+              "\n",
+              "      const buffers = [];\n",
+              "      let downloaded = 0;\n",
+              "\n",
+              "      const channel = await google.colab.kernel.comms.open(id);\n",
+              "      // Send a message to notify the kernel that we're ready.\n",
+              "      channel.send({})\n",
+              "\n",
+              "      for await (const message of channel.messages) {\n",
+              "        // Send a message to notify the kernel that we're ready.\n",
+              "        channel.send({})\n",
+              "        if (message.buffers) {\n",
+              "          for (const buffer of message.buffers) {\n",
+              "            buffers.push(buffer);\n",
+              "            downloaded += buffer.byteLength;\n",
+              "            progress.value = downloaded;\n",
+              "          }\n",
+              "        }\n",
+              "      }\n",
+              "      const blob = new Blob(buffers, {type: 'application/binary'});\n",
+              "      const a = document.createElement('a');\n",
+              "      a.href = window.URL.createObjectURL(blob);\n",
+              "      a.download = filename;\n",
+              "      div.appendChild(a);\n",
+              "      a.click();\n",
+              "      div.remove();\n",
+              "    }\n",
+              "  "
+            ]
+          },
+          "metadata": {}
+        },
+        {
+          "output_type": "display_data",
+          "data": {
+            "text/plain": [
+              "<IPython.core.display.Javascript object>"
+            ],
+            "application/javascript": [
+              "download(\"download_c055356d-e23d-45a8-9a8c-52382dcf2583\", \"app.py\", 9725)"
+            ]
+          },
+          "metadata": {}
+        },
+        {
+          "output_type": "display_data",
+          "data": {
+            "text/plain": [
+              "<IPython.core.display.Javascript object>"
+            ],
+            "application/javascript": [
+              "\n",
+              "    async function download(id, filename, size) {\n",
+              "      if (!google.colab.kernel.accessAllowed) {\n",
+              "        return;\n",
+              "      }\n",
+              "      const div = document.createElement('div');\n",
+              "      const label = document.createElement('label');\n",
+              "      label.textContent = `Downloading \"${filename}\": `;\n",
+              "      div.appendChild(label);\n",
+              "      const progress = document.createElement('progress');\n",
+              "      progress.max = size;\n",
+              "      div.appendChild(progress);\n",
+              "      document.body.appendChild(div);\n",
+              "\n",
+              "      const buffers = [];\n",
+              "      let downloaded = 0;\n",
+              "\n",
+              "      const channel = await google.colab.kernel.comms.open(id);\n",
+              "      // Send a message to notify the kernel that we're ready.\n",
+              "      channel.send({})\n",
+              "\n",
+              "      for await (const message of channel.messages) {\n",
+              "        // Send a message to notify the kernel that we're ready.\n",
+              "        channel.send({})\n",
+              "        if (message.buffers) {\n",
+              "          for (const buffer of message.buffers) {\n",
+              "            buffers.push(buffer);\n",
+              "            downloaded += buffer.byteLength;\n",
+              "            progress.value = downloaded;\n",
+              "          }\n",
+              "        }\n",
+              "      }\n",
+              "      const blob = new Blob(buffers, {type: 'application/binary'});\n",
+              "      const a = document.createElement('a');\n",
+              "      a.href = window.URL.createObjectURL(blob);\n",
+              "      a.download = filename;\n",
+              "      div.appendChild(a);\n",
+              "      a.click();\n",
+              "      div.remove();\n",
+              "    }\n",
+              "  "
+            ]
+          },
+          "metadata": {}
+        },
+        {
+          "output_type": "display_data",
+          "data": {
+            "text/plain": [
+              "<IPython.core.display.Javascript object>"
+            ],
+            "application/javascript": [
+              "download(\"download_68745d8f-d33e-4e4f-8ace-d896b21e998f\", \"requirements.txt\", 87)"
+            ]
+          },
+          "metadata": {}
+        }
+      ]
+    }
+  ]
+}
